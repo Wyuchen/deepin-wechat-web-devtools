@@ -3,7 +3,7 @@
 linux 下使用微信web开发者工具.
 
 ![wx_dev_tools v1.02.1910121](https://img.shields.io/badge/wx_dev_tools-1.02.1910121-green.svg)
-![nw.js v0.24.4](https://img.shields.io/badge/nw.js-v0.24.4-blue.svg)
+![nw.js v0.38.0](https://img.shields.io/badge/nw.js-v0.38.0-blue.svg)
 
 ## Description
 
@@ -12,18 +12,20 @@ linux 下使用微信web开发者工具.
 负责编译 `wxml` 和 `wxss` 的 `wcc` 和 `wcsc` (可能还有其他功能),
 则利用 `wine` 来跑即可.
 
-## Usage
+## 使用步骤
 
-### 下载项目和初始化
+### 1.下载项目和初始化
 
 ``` bash
-git clone https://github.com/cytle/wechat_web_devtools.git
-cd wechat_web_devtools
+git clone https://github.com/Wyuchen/deepin-wechat-web-devtools.git
+
+cd deepin-wechat_web_devtools
+
 # 自动下载最新 `nw.js` , 同时部署目录 `~/.config/wechat_web_devtools/`
 ./bin/wxdt install
 ```
 
-### 启动ide，开发和调试网页
+### 2.启动ide，开发和调试网页
 
 运行准备:
 
