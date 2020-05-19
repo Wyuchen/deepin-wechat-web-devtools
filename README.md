@@ -13,6 +13,11 @@ linux 下使用微信web开发者工具.
 则利用 `wine` 来跑即可.
 
 ## 使用步骤
+### 0.安装wine
+
+``` bash
+apt-get install wine -y
+```
 
 ### 1.下载项目和初始化
 
@@ -34,19 +39,6 @@ cd deepin-wechat_web_devtools
 ``` bash
 ./bin/wxdt # 启动
 ```
-
-### 启动ide，开发和预览小程序
-
-运行准备:
-
-1. `GUI`环境
-2. 需要[安装`wine`](#安装Wine)
-3. 并且已经执行过`./bin/wxdt install`
-
-``` bash
-./bin/wxdt # 启动
-```
-
 ### 命令行和HTTP调用
 
 运行准备:
@@ -93,28 +85,6 @@ docker start wxdt # 下次使用，不用再run，可以直接exec
 ```
 
 ## 其它说明
-
-### 安装Wine
-
-请参考搜索引擎安装 [Wine](https://wiki.winehq.org/Download)，以下是`Ubuntu`下两种安装
-
-#### 1. 安装`wine-binfmt`
-
-``` bash
-sudo apt-get install wine-binfmt
-sudo update-binfmts --import /usr/share/binfmts/wine
-```
-
-#### 2. 正常安装`wine`
-
-``` bash
-    dpkg --add-architecture i386 \
-  && wget -nc https://dl.winehq.org/wine-builds/winehq.key \
-  && apt-key add winehq.key \
-  && apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main' \
-  && apt-get update \
-  && apt-get install -y --no-install-recommends --allow-unauthenticated winehq-stable
-```
 
 ### `./bin/wxdt install` 报错失败
 
