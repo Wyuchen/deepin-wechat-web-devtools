@@ -1,0 +1,7 @@
+/.tmp
+/.build
+/dist
+npm-debug.log
+/node_modules
+*.log
+winehq.key
