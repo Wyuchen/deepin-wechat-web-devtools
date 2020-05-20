@@ -86,7 +86,7 @@ docker start wxdt # 下次使用，不用再run，可以直接exec
 
 ## 其它说明
 
-### `./bin/wxdt install` 报错失败
+### 1.  `./bin/wxdt install` 报错失败
 
 > ./nw: error while loading shared libraries: libnw.so: cannot open shared object file: No such file or directory
 
@@ -103,7 +103,7 @@ rm -rf /tmp/wxdt_xsp
 ./bin/wxdt install
 ```
 
-### `wcc` 和 `wcsc` 编译错误
+### 2.`wcc` 和 `wcsc` 编译错误
 
 是`wine`没安装好导致的，或是没有成功替换`wcc` 和 `wcsc`两个二进制文件
 
@@ -111,3 +111,12 @@ rm -rf /tmp/wxdt_xsp
 - 方案二: 安装`wine-binfmt`
 
 完成后, 点击 <kbd>编译</kbd> 即可.
+
+### 3.ERROR:buffer_manager.cc(488)] [.DisplayCompositor]GL ERROR :GL_INVALID_OPERATION : glBufferData: <- error from previous GL command
+
+```报错原因：配置中使用了gpu导致的，所以在启动时强制执行不使用gpu就可以正常运行
+解决方法： ./bin/wxdt --disable-gpu   （启动时候添加参数）
+```
+### 4.ERROR:bus.cc(393)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+
+```解决方法：使用非root用户启动微信开发者工具就不会报错了，具体原因不清楚。```
